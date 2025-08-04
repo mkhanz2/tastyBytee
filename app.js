@@ -336,10 +336,9 @@ app.post('/payment-all', verifyUser, async (req, res) => {
   }
 });
 
-
 app.get('/ai-chat', (req,res)=>{
   res.render('ai-chat')
-})
+}) 
 
 
 
@@ -528,6 +527,12 @@ app.get('/pancake',(req,res)=>{
   res.render('pancake')
 })
 
+
+// APPLY FOR JOBS
+
+app.get('/jobs', (req,res)=>{
+  res.render('ai-chat')
+})
 
 // Logout
 app.get('/logout', (req, res) => {
