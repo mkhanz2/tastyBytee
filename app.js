@@ -337,6 +337,9 @@ app.post('/payment-all', verifyUser, async (req, res) => {
 });
 
 
+app.get('/ai-chat', (req,res)=>{
+  res.render('ai-chat')
+})
 
 
 
