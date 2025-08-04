@@ -1,0 +1,40 @@
+home page
+
+// TOP BANNER //
+1. account btn -> redirect to ('/account-detail') account page where user can add,edit,delete or update their {name, address ,email}
+    # account page where user can add,edit,delete or update their {name, address ,email,password, ph no.}
+
+
+// MAIN SECTION WHERE USER CAN SEE SERVICES/ DASHBOARD //
+2.logout btn -> redirect to login page 
+
+
++++ wishlist
+
+3. shopping "purchase now button" -> will redirect to item page
+
+4. order food
+
+5. recipes
+
+6. classes
+
+7. ideas
+
+8. join our team career page 
+
+
+others AI chat
+
+
+// botton section of the page will have "connect us" through insta linkden pintreset etc...
+
+
+
+
+view profile 
+check for JWT token 
+    if not redirect to login
+
+decode
+find user based on email

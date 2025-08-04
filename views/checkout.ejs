@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        font-family: 'Baloo 2';
+        font-weight: 400;
+        font-style: normal;
+        background-image: url(/images/istockphoto-488010990-170667a-removebg-preview.png)
+    }
+
+    .main{
+        /* border: 2px solid black; */
+        box-shadow: 2px 2px 10px rgb(16, 16, 16);
+        height: 80%;
+        margin-top: 4%;
+        border-radius: 5px;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        flex-direction: column;
+    }
+  
+    button{
+        width: 180px;
+        padding: 10px;
+        cursor: pointer;
+        background-color: royalblue;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        transition: all 0.5s;
+    }
+
+    button:hover{
+        background-color: rgb(81, 117, 224);
+        transform: scale(1.1);
+    }
+
+    img{
+        height: 250px
+    }
+</style>
+
+
+<body>
+    <div class="main">
+        <img src=" <%= buyingItems.imgUrl %>" alt="">
+        <h2><%= buyingItems.itemName %></h2>
+        <h3><%= buyingItems.productDescription %></h3>
+        <h3> Product price :  ₹<%= buyingItems.price %></h3>
+        <h3>Shipment :  ₹ 20</h3>
+        <h3>Total : ₹<%= buyingItems.price + 20 %> </h3>
+        <form action="/payment" method="post">
+            <input type="hidden" name="imgUrl" value="<%= buyingItems.imgUrl %>">
+            <input type="hidden" name="itemName" value="<%= buyingItems.itemName %>">
+            <input type="hidden" name="productDescription" value="<%= buyingItems.productDescription %>">
+            <input type="hidden" name="price" value="<%= buyingItems.price %>">
+            <input type="hidden" name="shipment" value="<%= 20 %>">
+            <input type="hidden" name="totalPrice" value="<%= buyingItems.price + 20  %>">
+            <button type="submit">Confirm</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

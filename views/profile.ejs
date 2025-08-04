@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        font-family: 'Baloo 2';
+        font-weight: 400;
+        font-style: normal;
+        background-image: url(/images/istockphoto-488010990-170667a-removebg-preview.png)
+    }
+
+    .main{
+        /* border: 2px solid black; */
+        box-shadow: 2px 2px 10px rgb(16, 16, 16);
+        height: 80%;
+        margin-top: 4%;
+        border-radius: 5px;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+        padding: 5px;
+    }
+
+    input{
+        width: 90%;
+        padding: 12px;
+        border-radius: 5px;
+        background-color: rgb(239, 238, 238);
+        border: none;
+    }
+
+    label{
+        width: 95%;
+        padding: 8px 10px;
+        border-radius: 5px;
+    }
+
+    button{
+        width: 80%;
+        padding: 10px;
+        cursor: pointer;
+        background-color: royalblue;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        transition: all 0.5s;
+    }
+
+    .profile-btn{
+        background-color: rgb(216, 124, 155);;
+    }
+
+    button:hover{
+        background-color: rgb(81, 117, 224);
+        transform: scale(1.1);
+    }
+
+    .profile-btn:hover{
+        background-color: rgb(215, 142, 166);
+    }
+
+    
+
+
+
+</style>
+
+
+<body>
+    <div class="main">
+            <form action="/edit">
+                <h2>Your information</h2>
+                <p><%= user.name %></p>
+                <p><%= user.address %></p>
+                <p><%= user.number %></p>
+                <p><%= user.dob %></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

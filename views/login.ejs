@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    height: 100vh;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Baloo 2';
+    background-image: url(/images/istockphoto-488010990-170667a-removebg-preview.png);
+}
+
+.main{
+    width: 700px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.welcomeSite{
+    color: white;
+    padding: 30px;
+    text-align: center;
+    background-color: hotpink;
+    flex: 1;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.mainForm{
+    padding: 30px;
+    flex: 1;
+}
+
+a{
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    /* align-items:center; */
+    gap: 20px;
+}
+
+
+
+input{
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+button{
+    padding: 12px;
+    border: none;
+    background-color: royalblue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+button:hover{
+    background-color: rgb(84, 119, 227);
+    transform: scale(1.1);
+}
+
+
+</style>
+
+
+<body>
+    <div class="main">
+        <div class="mainForm">
+            <form action="/login" method="post">
+                <input type="text" name="username" id="" placeholder="Username">
+                <input type="password" name="password" id="" placeholder="Password">
+                <button type="submit"> Login </button>
+            </form>
+        </div>
+
+            <div class="welcomeSite">
+                <h1>Welcome back to tastyBytee!</h1>
+                <h3>Login to explore delicious recipes, order sweet treats, or sell your own creations.</h3>
+            </div>
+            
+    </div>
+</body>
+</html>
+
+
+

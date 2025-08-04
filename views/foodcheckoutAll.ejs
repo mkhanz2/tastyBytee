@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
+  <title>Course</title>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Baloo 2";
+    font-weight: 400;
+    font-style: normal;
+    background-image: url(/images/orange-bg.png);
+  }
+
+  /* ENTIRE SECTION */
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* THIS SECTION WILL BE FOR "NAVBAR" */
+
+  .unordered-li {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    display: block;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: xx-large;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 16px;
+    color: black;
+    font-size: 1em;
+    transition: all 0.5s;
+  }
+
+  .unordered-li .home-btn {
+    padding: 12px 15px;
+    border: none;
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 5px;
+  }
+
+  .unordered-li .home-btn:hover {
+    background-color: rgb(82, 116, 220);
+    transform: scale(1.1);
+  }
+
+  .cart-btn {
+    padding: 12px 15px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: palevioletred;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .cart-btn:hover {
+    background-color: rgb(216, 124, 155);
+    transform: scale(1.1);
+  }
+
+  .section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sectoin2-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  /*  transform prop */
+  .sectoin2-grid>div {
+    transition: all 0.5s;
+  }
+
+
+  .order {
+    padding: 5px 10px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    height: 280px;
+    width: 275px;
+    transition: all 0.5s;
+  }
+
+  .section2-btn {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #4169e1;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+  }
+
+  .item-img {
+    margin-top: 20px;
+    height: 120px;
+  }
+
+
+  .section2-btn:hover {
+    box-shadow: 5px 5px 18px #708de3;
+    transform: scale(1.1);
+  }
+
+  .item-img {
+    height: 100px;
+  }
+
+  .btn-remove {
+    padding: 12px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: tomato;
+    cursor: pointer;
+  }
+
+  @media (max-width: 650px) {
+    .sectoin2-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .productDescription {
+    text-align: center;
+  }
+
+  .btn-buy{
+    padding: 12px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    cursor: pointer;
+  }
+  
+  .buttons{
+    margin-top: 4%;
+  }
+
+  .buy-all{
+    padding: 12px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    cursor: pointer;
+  }
+
+  .confirm-btn{
+    padding: 12px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: royalblue;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .confirm-btn:hover {
+    box-shadow: 5px 5px 18px #708de3;
+    transform: scale(1.1);
+  }
+
+
+
+</style>
+
+<body>
+  <section class="entire-section">
+    <!-- NABAR -->
+    <div class="navbar">
+      <ul class="unordered-li">
+        <li>
+          <img src="/images/logo.png" class="logo" alt="" />
+          <p>Welcome to tastyBytee – where cravings meet comfort</p>
+        </li>
+        <!-- account detials button which will redirect to account-details -->
+        <a href="/home"><button class="home-btn">Home</button></a>
+        <a href="/order-now"><button class="cart-btn">Order page</button></a>
+      </ul>
+    </div>
+
+    <!-- section 1 -->
+        <div class="section-2">
+            <form action="/payment-allFood" method="post">
+                <h1 style="text-align: center">Confirm your order <a href="/payment-all"><button type="submit" class="confirm-btn">Confirm</button></a> </h1>
+            </form>
+          <!-- <h2 style="text-align: center">Total price  </h2> -->
+          
+          <div class="section2-course">
+            <div class="sectoin2-grid">
+    
+              <% allFoodItems.forEach(function(item){ %>
+                <div class="order card">
+                  <img src="<%= item.imgUrl %>" alt="" srcset="" class="item-img">
+                  <h4>
+                    <%= item.itemName %>
+                  </h4>
+                  <p>₹<%= item.price %>
+                  </p>
+                  <p class="productDescription">
+                    <%= item.productDescription %>
+                  </p>
+                </div>
+                <% }) %>
+            </div>
+
+
+
+      </div>
+    </div>
+    </div>
+  </section>
+</body>
+
+</html>

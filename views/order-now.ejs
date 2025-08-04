@@ -1,0 +1,645 @@
+<!-- FROM HERE CUTOMER CAN ORDER THEIR FOOD -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <title>Course</title>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2';
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* ENTIRE SECTION */
+
+  .entire-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* THIS SECTION WILL BE FOR "NAVBAR" */
+
+  .unordered-li {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    display: block;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: xx-large;
+  }
+
+  .navbar {
+    background-image: url(/images/istockphoto-488010990-170667a-removebg-preview.png);
+  }
+
+  a {
+    text-decoration: none;
+    padding: 16px;
+    color: black;
+    font-size: 1em;
+    transition: all 0.5s;
+  }
+
+  .unordered-li .logout-btn {
+    padding: 12px 15px;
+    border: none;
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 5px;
+  }
+
+  .unordered-li .logout-btn:hover {
+    background-color: rgb(82, 116, 220);
+    transform: scale(1.1);
+  }
+
+  .account-btn {
+    padding: 12px 15px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: palevioletred;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .account-btn:hover {
+    background-color: rgb(216, 124, 155);
+    transform: scale(1.1);
+  }
+
+
+  /*  HERE IS THE SECTION-1 */
+
+
+  .section-1 {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+
+.btn-category{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+
+  .section1-btn {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    /* width: 100%; */
+    margin-top: 10px;
+    background-color: #4169e1;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+  }
+
+  .section1-btn:hover {
+    box-shadow: 5px 5px 18px #708de3;
+    transform: scale(1.1);
+  }
+
+  .CheesyCravings-btn {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    /* width: 100%; */
+    margin-top: 10px;
+    background-color: #4169e1;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+  }
+
+  .CheesyCravings-btn:hover {
+    box-shadow: 5px 5px 18px #708de3;
+    transform: scale(1.1);
+  }
+
+  .maincourse {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    /* width: 100%; */
+    margin-top: 10px;
+    background-color: #4169e1;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+  }
+
+  .maincourse:hover {
+    box-shadow: 5px 5px 18px #708de3;
+    transform: scale(1.1);
+  }
+
+  .section-1 h1 {
+    font-size: 2em;
+  }
+
+
+  /*  HERE SECTION-2 IS STARTING */
+
+  .section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgb(232, 231, 231); */
+    background-image: url(/images/istockphoto-488010990-170667a-removebg-preview.png);
+  }
+
+  .order {
+    padding: 5px 10px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    height: 295px;
+    width: 275px;
+    transition: all 0.5s;
+  }
+
+  .unordered-li .cart-btn {
+    padding: 12px 15px;
+    border: none;
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 5px;
+  }
+
+  .unordered-li .cart-btn:hover {
+    background-color: rgb(82, 116, 220);
+    transform: scale(1.1);
+  }
+
+  .wishList-btn {
+    padding: 12px 15px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: palevioletred;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .wishList-btn:hover {
+    background-color: rgb(216, 124, 155);
+    transform: scale(1.1);
+  }
+
+  .order-history {
+    padding: 12px 15px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: green;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .order-history:hover {
+    background-color: rgb(15, 134, 15);
+    transform: scale(1.1);
+  }
+
+  .section2-btn {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+  }
+
+  .section2-btn:hover {
+    box-shadow: 5px 5px 18px #e89435;
+    transform: scale(1.1);
+  }
+
+
+
+
+  /* SECTION 4  BRAND*/
+
+  .section-4 {
+    padding: 10px 15px;
+    box-shadow: 0px 0px 8px royalblue;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-4 img {
+    height: 2em;
+  }
+
+  @media (max-width:600px) {
+    .brand-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+
+
+  /* new */
+
+  .sectoin2-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+
+
+  .item-img {
+    margin-top: 20px;
+    height: 120px;
+  }
+
+  @media (max-width:650px) {
+    .sectoin2-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media (max-width: 650px) {
+    .unordered-li {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>
+
+<body>
+
+  <section class="entire-section">
+
+    <!-- NABAR -->
+    <div class="navbar">
+      <form action="/cart"></form>
+
+      <ul class="unordered-li">
+        <li>
+          <img src="/images/logo.png" class="logo" alt="" />
+          <p>Shop Your Favorites – Hassle-Free!</p>
+        </li>
+        <a href="/order-foodCart"><button class="cart-btn">Cart <%= foodItems %></button></a>
+        <a href="/wish-list"><button class="wishList-btn">Wish list</button></a>
+        <a href="/orderedFood"><button class="order-history">My orders</button></a>
+      </ul>
+    </div>
+
+    <!-- SECTION 1 WITH IMG AND FORM -->
+
+    <div class="section-1">
+
+      <!-- section-1 form portion -->
+      <div class="section1-right">
+        <h1 style="text-align: center;">Order Confusion? We’ve Got You!</h1>
+        <p style="text-align: center;">"Select the category." </p>
+        <!-- <form action="/ai-chat"> -->
+          <div class="btn-category">
+            <button onclick="scrollTosweet()" class="section1-btn">sweet items</button>
+            <button onclick="scrollToCheesyCravings()" class="CheesyCravings-btn">Cheesy Cravings</button>
+            <button onclick="scrollToMainCourse()" class="maincourse">Main course</button>
+          </div>
+        <!-- </form> -->
+      </div>
+    </div>
+
+    <!-- SECTION-2 WILL BE H1 FLEX GRID -->
+
+    <div class="section-2">
+      <h1 style="text-align: center;">OUR SERVICES</h1>
+      <div class="section2-course">
+
+        <div class="sectoin2-grid">
+
+          <!-- 1 -->
+          <div class="order card CheesyCravings">
+            <img src="/images/burger-img.avif" alt="" class="item-img" />
+            <h4>Korean Burger</h4>
+            <p style="text-align: center">
+              Korean Spicy Chicken Burger (Reg. Size Bun).
+            </p>
+            <p> ₹220</p>
+            <form action="/add-to-foodCart" method="post">
+              <input type="hidden" name="imgUrl" id="" value="/images/burger-img.avif">
+              <input type="hidden" name="itemName" id="" value="Korean Burger">
+              <input type="hidden" name="productDescription" id=""
+                value=" Korean Spicy Chicken Burger (Reg. Size Bun).">
+              <input type="hidden" name="price" id="" value="220">
+              <button class="section2-btn" type="submit">Add to cart</button>
+            </form>
+          </div>
+
+          <!-- 2 -->
+          <div class="order card">
+            <img src="/images/pizza.avif" alt="" class="item-img" />
+            <h4>Classic Pizza</h4>
+            <p style="text-align: center">
+              Toppings: Mushroom, Onion,Capsicum, Bell Pepper, Fresh Mozzarella.
+            </p>
+            <p> ₹300</p>
+            <form action="/add-to-foodCart" method="post">
+              <input type="hidden" name="imgUrl" id="" value="/images/pizza.avif">
+              <input type="hidden" name="itemName" id="" value="Classic Pizza">
+              <input type="hidden" name="productDescription" id=""
+                value=" Toppings: Mushroom, Onion,Capsicum, Bell Pepper, Fresh Mozzarella.">
+              <input type="hidden" name="price" id="" value="300">
+              <button class="section2-btn" type="submit">Add to cart</button>
+            </form>
+          </div>
+
+          <!-- 3 -->
+           <div class="order card">
+            <img src="/images/pasta.png" alt="" class="item-img" />
+            <h4>Pasta</h4>
+            <p style="text-align: center">
+              Made with different sauces with a tangy flavour.Served with garlic toast.
+            </p>
+            <p> ₹220</p>
+            <form action="/add-to-foodCart" method="post">
+              <input type="hidden" name="imgUrl" id="" value="/images/pasta.png">
+              <input type="hidden" name="itemName" id="" value="Pasta">
+              <input type="hidden" name="productDescription" id=""
+                value=" Made with different sauces with a tangy flavour.Served with garlic toast.">
+              <input type="hidden" name="price" id="" value="220">
+              <button class="section2-btn" type="submit">Add to cart</button>
+            </form>
+          </div>
+
+          <!-- 4 -->
+          <div class="order card sweet">
+            <img src="/images/muffin.avif" alt="" class="item-img" />
+            <h4>Chocolate Muffin</h4>
+            <p style="text-align: center">
+              Freshly baked Chocolate Muffin with Chocolate chips.
+            </p>
+            <p> ₹50</p>
+            <form action="/add-to-foodCart" method="post">
+              <input type="hidden" name="imgUrl" id="" value="/images/muffin.avif">
+              <input type="hidden" name="itemName" id="" value="Chocolate Muffin">
+              <input type="hidden" name="productDescription" id=""
+                value=" Freshly baked Chocolate Muffin with Chocolate chips.">
+              <input type="hidden" name="price" id="" value="50">
+              <button class="section2-btn" type="submit">Add to cart</button>
+            </form>
+          </div>
+
+          <!-- 5 -->
+          <div class="order card ">
+            <img src="/images/bombolini.png" alt="" class="item-img" />
+            <h4>Bombolini</h4>
+            <p style="text-align: center">
+              Bombolini Dessert, filled with Chocolate, Vannila & Mango (3PC)
+            </p>
+            <p> ₹90</p>
+            <form action="/add-to-foodCart" method="post">
+              <input type="hidden" name="imgUrl" id="" value="/images/bombolini.png">
+              <input type="hidden" name="itemName" id="" value="Bombolini">
+              <input type="hidden" name="productDescription" id=""
+                value=" Bombolini Dessert, filled with Chocolate, Vannila & Mango (3PC)">
+              <input type="hidden" name="price" id="" value="90">
+              <button class="section2-btn" type="submit">Add to cart</button>
+            </form>
+          </div>
+
+          <!-- 6 -->
+          <div class="order card">
+            <img src="/images/cake.png" alt="" class="item-img" />
+            <h4>Chocolate cake</h4>
+            <p style="text-align: center">
+              Dark chocolate garnish, chocolate sponge and Dutch truffle.
+            </p>
+            <p> ₹550</p>
+            <form action="/add-to-foodCart" method="post">
+              <input type="hidden" name="imgUrl" id="" value="/images/cake.png">
+              <input type="hidden" name="itemName" id="" value="Chocolate cake">
+              <input type="hidden" name="productDescription" id=""
+                value="Dark chocolate garnish, chocolate sponge and Dutch truffle.">
+              <input type="hidden" name="price" id="" value="550">
+              <button class="section2-btn" type="submit">Add to cart</button>
+            </form>
+          </div>
+          
+          
+          <!-- 7 -->
+          <div class="order card">
+            <img src="/images/noodles.png" alt="" class="item-img" />
+            <h4>Veg Schezwan Noodles</h4>
+            <p style="text-align: center">
+              A delicious combination of cabbage, carrot, bell pepper, and spring onion.
+            </p>
+            <p> ₹150</p>
+            <form action="/add-to-foodCart" method="post">
+              <input type="hidden" name="imgUrl" id="" value="/images/noodles.png">
+              <input type="hidden" name="itemName" id="" value="Veg Schezwan Noodles">
+              <input type="hidden" name="productDescription" id=""
+              value="A delicious combination of cabbage, carrot, bell pepper, and spring onion">
+              <input type="hidden" name="price" id="" value="150">
+              <button class="section2-btn" type="submit">Add to cart</button>
+            </form>
+          </div>
+          
+          <!-- 8 -->
+          <div class="order card ">
+            <img src="/images/sandwich.png" alt="" class="item-img" />
+            <h4>Crispy Chicken Focaccia Sandwich</h4>
+            <p style="text-align: center">
+              Crispy fried chicken sandwich, A medly of flavours to spice up
+            </p>
+            <p> ₹290</p>
+            <form action="/add-to-foodCart" method="post">
+              <input type="hidden" name="imgUrl" id="" value="/images/sandwich.png">
+              <input type="hidden" name="itemName" id="" value="Crispy Chicken Focaccia Sandwich">
+              <input type="hidden" name="productDescription" id=""
+                value="Crispy fried chicken sandwich,  A medly of flavours to spice up">
+              <input type="hidden" name="price" id="" value="290">
+              <button class="section2-btn" type="submit">Add to cart</button>
+            </form>
+          </div>
+
+
+          <!-- 9 -->
+            <div class="order card ">
+            <img src="/images/chicken-popcorn.png" alt="" class="item-img" />
+            <h4>Chicken popcorn</h4>
+            <p style="text-align: center">
+              16-18 Pcs served with Fresh Garlic Dip & Spicy Sriracha Dip.
+            </p>
+            <p> ₹189</p>
+            <form action="/add-to-foodCart" method="post">
+              <input type="hidden" name="imgUrl" id="" value="/images/chicken-popcorn.png">
+              <input type="hidden" name="itemName" id="" value="Chicken popcorn">
+              <input type="hidden" name="productDescription" id=""
+              value="16-18 Pcs served with Fresh Garlic Dip & Spicy Sriracha Dip.">
+              <input type="hidden" name="price" id="" value="189">
+              <button class="section2-btn" type="submit">Add to cart</button>
+            </form>
+          </div>
+
+          <!-- 10 -->
+          <div class="order card main">
+            <img src="/images/chicken-pepper.png" alt="" class="item-img" />
+            <h4>Chicken Black-pepper (6pcs)</h4>
+            <p style="text-align: center">
+              Toppings: Mushroom, Onion,Capsicum, Bell Pepper, Fresh Mozzarella.
+            </p>
+            <p> ₹320</p>
+            <form action="/add-to-foodCart" method="post">
+              <input type="hidden" name="imgUrl" id="" value="/images/chicken-pepper.png">
+              <input type="hidden" name="itemName" id="" value="Chicken Black-pepper (6pcs)">
+              <input type="hidden" name="productDescription" id=""
+                value=" Toppings: Mushroom, Onion,Capsicum, Bell Pepper, Fresh Mozzarella.">
+              <input type="hidden" name="price" id="" value="320">
+              <button class="section2-btn" type="submit">Add to cart</button>
+            </form>
+          </div>
+
+          <!-- 11 -->
+          <div class="order card">
+            <img src="/images/chicken-chilli.png" alt="" class="item-img" />
+            <h4>Chicken Chilli (6pcs)</h4>
+            <p style="text-align: center">
+              Chicken drumsticks tossed in sweet & spicy sauce with bellpeppers.
+            </p>
+            <p> ₹310</p>
+            <form action="/add-to-foodCart" method="post">
+              <input type="hidden" name="imgUrl" id="" value="/images/chicken-chilli.png">
+              <input type="hidden" name="itemName" id="" value="Chicken Chilli (6pcs)">
+              <input type="hidden" name="productDescription" id=""
+                value=" Chicken drumsticks tossed in sweet & spicy sauce with bellpeppers.">
+              <input type="hidden" name="price" id="" value="310">
+              <button class="section2-btn" type="submit">Add to cart</button>
+            </form>
+          </div>
+
+          <!-- 12 -->
+           <div class="order card">
+            <img src="/images/paneer.png" alt="" class="item-img" />
+            <h4>Panner Tikka (6pcs)</h4>
+            <p style="text-align: center">
+              Paneer tikka marinadated with spices and hung curd, cut into bitesize pieces.
+            </p>
+            <p> ₹200</p>
+            <form action="/add-to-foodCart" method="post">
+              <input type="hidden" name="imgUrl" id="" value="/images/paneer.png">
+              <input type="hidden" name="itemName" id="" value="Panner Tikka (6pcs)">
+              <input type="hidden" name="productDescription" id=""
+                value=" Paneer tikka marinadated with spices and hung curd, cut into bitesize pieces.">
+              <input type="hidden" name="price" id="" value="200">
+              <button class="section2-btn" type="submit">Add to cart</button>
+            </form>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- CONNECT WITH US -->
+    <h1 style="text-align: center;">Connect with us</h1>
+    <div class="section-4">
+      <div class="brand-container">
+        <a href="#"><img src="/images/insta-icon.png" alt=""></a>
+        <a href="#"><img src="/images/pinterest-icon.png" alt=""></a>
+        <a href="#"><img src="/images/inkedin-icon.png" alt=""></a>
+        <a href="#"><img src="/images/gmail-icon.png" alt=""></a>
+        <a href="#"><img src="/images/facebook-icon.png" alt=""></a>
+      </div>
+    </div>
+  </section>
+</body>
+
+<script>
+  function scrollTosweet() {
+    const sweetSection = document.querySelector('.sweet');
+    if (sweetSection) {
+      sweetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function scrollToCheesyCravings(){
+    const CheesyCravingsSection= document.querySelector('.CheesyCravings');
+    if(CheesyCravingsSection){
+      CheesyCravingsSection.scrollIntoView({behavior:'smooth', block:'start'})
+    }
+  }
+  
+  function scrollToMainCourse(){
+    const mainitems= document.querySelector('.main');
+    if(mainitems){
+      mainitems.scrollIntoView({behavior:'smooth', block:'start'})
+    }
+  }
+</script>
+
+
+</html>
