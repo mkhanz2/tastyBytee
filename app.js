@@ -521,6 +521,10 @@ app.get('/chocolate-cake',verifyUser,(req,res)=>{
   res.render('chocolate-cake')
 })
 
+app.get('/pancake',(req,res)=>{
+  res.render('pancake')
+})
+
 
 // Logout
 app.get('/logout', (req, res) => {
