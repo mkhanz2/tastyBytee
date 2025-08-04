@@ -1,3 +1,4 @@
+require('dotenv').config(); 
 const { name } = require('ejs')
 const mongoose= require('mongoose')
 
