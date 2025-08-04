@@ -9,7 +9,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }));
 app.use(cookie());
 const path = require('path');
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // EMAIL COMNFIRMATION
 const email = require('./helper/sendEmail')
