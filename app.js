@@ -9,6 +9,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }));
 app.use(cookie());
 const path = require('path');
+const PORT = process.env.PORT || 5000;
 
 // EMAIL COMNFIRMATION
 const email = require('./helper/sendEmail')
@@ -527,7 +528,6 @@ app.get('/logout', (req, res) => {
   res.redirect('login')
 })
 
-const PORT = 3000;
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-}); 
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+})
