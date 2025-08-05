@@ -538,7 +538,7 @@ app.get('/chicken-pepper',verifyUser,(req,res)=>{
 // APPLY FOR JOBS
 
 app.get('/jobs', (req,res)=>{
-  res.render('ai-chat')
+  res.render('jobs')
 })
 
 // Logout
