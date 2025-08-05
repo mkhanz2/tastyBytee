@@ -300,8 +300,7 @@
         <!-- <form action="/ai-chat"> -->
           <div class="btn-category">
             <button onclick="scrollTosweet()" class="section1-btn">sweet items</button>
-            <button onclick="scrollToCheesyCravings()" class="CheesyCravings-btn">Cheesy Cravings</button>
-            <button onclick="scrollToMainCourse()" class="maincourse">Main course</button>
+            <button onclick="scrollToSpicy()" class="maincourse">Spicy</button>
           </div>
         <!-- </form> -->
       </div>
@@ -316,7 +315,7 @@
         <div class="sectoin2-grid">
 
           <!-- 1 -->
-           <div class="order card ">
+           <div class="order card sweet">
             <img src="/images/pancake.png" alt="" class="item-img" />
             <h4>chocolate Pancake</h4>
             <p style="text-align: center">
@@ -345,7 +344,7 @@
           </div>
          
           <!-- 4 -->
-          <div class="order card ">
+          <div class="order card spicy">
             <img src="/images/chicken-chilli.png" alt="" class="item-img" />
             <h4>Chicken Chilli</h4>
             <p style="text-align: center">
@@ -356,15 +355,15 @@
 
 
 
-          <!-- 1 -->
+          <!-- 5 -->
           <div class="order card CheesyCravings">
-            <img src="/images/chicken-pepper.png" alt="" class="item-img" />
-            <h4>Chicken Black-pepper</h4>
+            <img src="/images/paneer.png" alt="" class="item-img" />
+            <h4>Paneer Tikka</h4>
             <p style="text-align: center">
-              A flavorful chicken dish infused with crushed black pepper and aromatic spices, perfect for spice lovers!
-            </p>
-              <button class="section2-btn" onclick="window.location.href='/home'">Read more</button>
+              Paneer Tikka is a spicy, grilled paneer dish cooked with capsicum and flavorful spices.</p>
+              <button class="section2-btn" onclick="window.location.href='/paneer-tikka'">Read more</button>
           </div>
+
           <!-- 1 -->
           <div class="order card CheesyCravings">
             <img src="/images/chicken-pepper.png" alt="" class="item-img" />
@@ -372,7 +371,7 @@
             <p style="text-align: center">
               A flavorful chicken dish infused with crushed black pepper and aromatic spices, perfect for spice lovers!
             </p>
-              <button class="section2-btn" onclick="window.location.href='/home'">Read more</button>
+              <button class="section2-btn" onclick="window.location.href='/chicken-pepper'">Read more</button>
           </div>
           
         </div>
@@ -397,6 +396,20 @@
 </body>
 
 <script>
+
+  function scrollTosweet(){
+    const sweet= document.querySelector('.sweet')
+    if(sweet){
+      sweet.scrollIntoView({behavior:"smooth", block:"start"})
+    }
+  }
+
+  function scrollToSpicy(){
+    const spicy= document.querySelector('.spicy')
+    if(spicy){
+      spicy.scrollIntoView({behavior:"smooth", block:"start"})
+    }
+  }
 
   
 </script>

@@ -523,10 +523,17 @@ app.get('/chocolate-cake',verifyUser,(req,res)=>{
   res.render('chocolate-cake')
 })
 
-app.get('/pancake',(req,res)=>{
+app.get('/pancake',verifyUser,(req,res)=>{
   res.render('pancake')
 })
 
+app.get('/paneer-tikka',verifyUser,(req,res)=>{
+  res.render('paneer-tikka')
+})
+
+app.get('/chicken-pepper',verifyUser,(req,res)=>{
+  res.render('chicken-pepper')
+})
 
 // APPLY FOR JOBS
 
