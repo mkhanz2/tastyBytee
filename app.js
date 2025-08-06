@@ -9,6 +9,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }));
 app.use(cookie());
 const path = require('path');
+const multer= require('multer')
 const PORT = process.env.PORT || 3000;
 
 // EMAIL COMNFIRMATION
@@ -537,17 +538,34 @@ app.get('/chicken-pepper',verifyUser,(req,res)=>{
 
 // APPLY FOR JOBS
 
-app.get('/jobs', (req,res)=>{
+app.get('/jobs',verifyUser, (req,res)=>{
   res.render('jobs')
+})
+
+const storage= multer.diskStorage({
+  destination:(req,file,cb)=>{
+    return cb(null,'./uploads')
+  },
+  filename:(req,file,cb)=>{
+    return cb(null,`${Date.now()}-${file.originalname}`)
+  }
+})
+
+const upload = multer({storage})
+// FROM HERE WE CAN STORE THE FILE/IMG UPLOADED BY USER
+
+app.post('/upload',verifyUser,upload.single('resumeFile'),(req,res)=>{
+  console.log(req.body)
+  console.log(req.file)
 })
 
 // Logout
 app.get('/logout', (req, res) => {
   res.cookie("token", "")
-  res.redirect('login')
+  res.redirect('login') 
 })
 
-app.listen(PORT, () => {
+app.listen(PORT, () => { 
   console.log(`Server running on port ${PORT}`);
 })
 

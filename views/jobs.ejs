@@ -95,7 +95,9 @@
       margin-bottom: 30px;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
+
   </style>
 </head>
 <body>
@@ -105,40 +107,20 @@
     <img src="/images/asset 1.png" alt="" class="hero-img">
 
     <div class="section-resume">
-      <form action="" method="post"></form>
-      <button class="resume-btn">Upload your resume</button>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="resumeFile" id="" class="upload-btn">
+        <button class="resume-btn" type="submit">Upload your resume</button>
+      </form>
     </div>
 
     <div class="section">
       <h2>Customer service representative</h2>
       <ul>
         <li></li>
-        <li>1 large egg and 2 tablespoons melted butter or oil</li>
-        <li>1 teaspoon vanilla extract</li>
       </ul>
     </div>
 
-    <div class="section">
-      <h2>Method</h2>
-      <ol>
-        <li>In a bowl, sift together flour, cocoa powder, sugar, baking powder, baking soda, and salt.</li>
-        <li>In another bowl, whisk together the milk, egg, melted butter, and vanilla extract until well combined.</li>
-        <li>Pour the wet mixture into the dry ingredients. Stir gently until the batter is smooth and lump-free. (Don't overmix.)</li>
-        <li>Fold in chocolate chips for extra richness.</li>
-        <li>Heat a non-stick pan or griddle over medium heat and lightly grease it. Pour 1/4 cup of batter for each pancake. Cook until bubbles form on the surface, then flip and cook the other side for 1–2 minutes.</li>
-        <li>Stack the pancakes and serve warm with chocolate syrup, banana slices, nuts, or whipped cream as desired.</li>
-      </ol>
-    </div>
-    <div class="section">
-      <h2>Products used and can be purchased from us.</h2>
-      <a href="/purchase-now"><img src="/images/choco-chips.webp" alt="" srcset=""></a>
-      <a href="/purchase-now"><img src="/images/baking-powder.webp" alt="" srcset=""></a>
-      <a href="/purchase-now"><img src="/images/chocolate.webp" alt="" srcset=""></a>
-      <a href="/purchase-now"><img src="/images/coco-powder.webp" alt="" srcset=""></a>
-    </div>
-    <button onclick="window.location.href='/home'">Home</button>
-    <button onclick="window.location.href='/explore-recepies'">Explore Recepies</button>
-  </div>
+   
 
 </body>
 </html>
