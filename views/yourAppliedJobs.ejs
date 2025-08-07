@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Honey Black Pepper Chicken</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Baloo+2&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Baloo 2', cursive;
+      /* background-color:  rgb(172, 219, 172); */
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    button{
+      cursor: pointer;
+      padding: 10px 20px;
+      background-color: darkgreen;
+      color: white;
+      border-radius: 5px;
+      border: none;
+      margin: 5px;
+      transition: all 0.5s;
+    }
+
+    button:hover{
+      transform: scale(1.1);
+    }
+
+    a>img{
+      height: 100px;
+      margin: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 2rem;
+      }
+    }
+
+    .resume-btn{
+      text-align: center;
+      width: 90%;
+      background-color: royalblue;
+    }
+
+    .section-resume{
+      display: flex;
+      margin-bottom: 30px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .jobApplied-btn{
+      width: 90%;
+      background-color: rgb(201, 122, 135);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">Your applied Jobs</h1>
+    <img src="/images/asset 17.png" alt="" class="hero-img">
+
+   
+
+     <!-- 2 -->
+      <div class="section">
+      <% appliedJobs.forEach(function(job){ %>
+        
+        <h2><%= job.Title %></h2>
+      <ul>
+        <li><%= job.Description %></li>
+        <li><%= job.Experience %></li>
+        <li><%= job.Type %></li>
+        <li><%= job.Skills %></li>
+      </ul>
+    <%  }) %>
+    </div>
+    <Button onclick="window.location.href='/jobs'">Explore openings</Button>
+    </div>
+</body>
+</html> 

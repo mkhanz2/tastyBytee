@@ -586,6 +586,15 @@ app.post('/apply-job',verifyUser, async(req,res)=>{
   }
 })
 
+// APPLIED JOBS
+app.get('/applied-jobs',verifyUser, async(req,res)=>{
+  const appliedJobs= await job.find({Email: req.user.email})
+
+  console.log(appliedJobs)
+
+  res.render('yourAppliedJobs',{appliedJobs})
+})
+
 // Logout
 app.get('/logout', (req, res) => {
   res.cookie("token", "")

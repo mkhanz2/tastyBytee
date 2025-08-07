@@ -98,6 +98,11 @@
       justify-content: center;
     }
 
+    .jobApplied-btn{
+      width: 90%;
+      background-color: rgb(201, 122, 135);
+    }
+
   </style>
 </head>
 <body>
@@ -110,6 +115,7 @@
       <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="file" name="resumeFile" id="" class="upload-btn">
         <button class="resume-btn" type="submit">Upload your resume</button>
+        <button class="jobApplied-btn" onclick="window.location.href='/applied-jobs'" type="button">Your applied Jobs</button>
       </form>
     </div>
 
