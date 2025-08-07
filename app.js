@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 3000;
 // EMAIL COMNFIRMATION
 const email = require('./helper/sendEmail')
 const emailAll= require('./helper/sendEmailAll')
+const jobEmail= require('./helper/sendJobEmail')
 
 // DATABASES
 const userAcc = require("./Db/appDb");
@@ -570,6 +571,14 @@ app.post('/apply-job',verifyUser, async(req,res)=>{
 
   const createdJob= await job.create({
     Email: req.user.email,
+    Title,
+    Description,
+    Experience,
+    Skills,
+    Type
+  })
+
+  jobEmail(req.user.email,{
     Title,
     Description,
     Experience,
