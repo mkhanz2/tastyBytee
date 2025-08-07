@@ -27,6 +27,9 @@ const purchasedItems = require("./Db/purchasedItems");
 const orderFoodCart = require("./Db/order-foodCart");
 const orderedFood = require("./Db/orderedFood");
 
+// JOBS DB
+const job= require('./Db/jobs')
+
 // FOR SENDING EMAIL TO CUSTOMERS
 const nodemailer = require('nodemailer');
 
@@ -557,6 +560,30 @@ const upload = multer({storage})
 app.post('/upload',verifyUser,upload.single('resumeFile'),(req,res)=>{
   console.log(req.body)
   console.log(req.file)
+})
+
+// USER CAN APPLY FOR INDIVIDUAL JOBS
+app.post('/apply-job',verifyUser, async(req,res)=>{
+
+  try{
+    const{Title,Description, Experience, Skills, Type}= req.body
+
+  const createdJob= await job.create({
+    Email: req.user.email,
+    Title,
+    Description,
+    Experience,
+    Skills,
+    Type,
+  })
+
+  console.log(createdJob)
+
+  res.send(`Applied for ${createdJob.Title}`)
+  }catch(err){
+    console.log(err)
+    res.status(500).send("Error in applying")
+  }
 })
 
 // Logout

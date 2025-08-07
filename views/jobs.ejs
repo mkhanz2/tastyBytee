@@ -113,14 +113,69 @@
       </form>
     </div>
 
+    <!-- 1 -->
     <div class="section">
       <h2>Customer service representative</h2>
       <ul>
-        <li></li>
+        <li>We are looking for a dedicated Customer Service Representative who can handle client inquiries, resolve complaints efficiently, and ensure a high level of customer satisfaction. Strong communication skills and a friendly attitude are a must.</li>
+        <li>Experience: 0-1 year</li>
+        <li>Remote</li>
+        <li>Skills: Strong communication & problem-solving skills</li>
       </ul>
+      <form action="/apply-job" method="POST">
+        <input type="hidden" name="Title" value="Customer Service representative">
+        <input type="hidden" name="Description" value="We are looking for a dedicated Customer Service Representative who can handle client inquiries, resolve complaints efficiently, and ensure a high level of customer satisfaction. Strong communication skills and a friendly attitude are a must.">
+        <input type="hidden" name="Experience" value="1">
+        <input type="hidden" name="Type" value="Remote">
+        <input type="hidden" name="Skills" value="Strong communication & problem-solving Skills">
+        <button type="submit" class="apply-btn">Apply</button>
+      </form>
     </div>
 
-   
+     <!-- 2 -->
+      <div class="section">
+      <h2>Node.js Developer</h2>
+      <ul>
+        <li>Join our team as a Node.js Developer to build fast and scalable server-side applications. You should have strong knowledge of JavaScript, experience with asynchronous programming, and the ability to work with RESTful APIs and databases.</li>
+        <li>Experience: 0-1 year</li>
+        <li>Remote</li>
+        <li>Skills: Familiarity with MongoDB and Mongoose, Experience with authentication (JWT, OAuth) and Git and version control</li>
+      </ul>
+      <form action="/apply-job" method="POST">
+        <input type="hidden" name="Title" value="Node.js Developer">
+        <input type="hidden" name="Description" value="Join our team as a Node.js Developer to build fast and scalable server-side applications. You should have strong knowledge of JavaScript, experience with asynchronous programming, and the ability to work with RESTful APIs and databases.">
+        <input type="hidden" name="Experience" value="1">
+        <input type="hidden" name="Type" value="Remote">
+        <input type="hidden" name="Skills" value="Familiarity with MongoDB and Mongoose, Experience with authentication (JWT, OAuth) and Git and version control">
+        <button type="submit" class="apply-btn">Apply</button>
+      </form>
+    </div>
 
+      <!-- 3 -->
+      <div class="section">
+      <h2>Express.js Developer</h2>
+      <ul>
+        <li>We are hiring an Express.js Developer to develop and maintain backend services. The ideal candidate should have experience in building APIs, middleware integration, and deploying applications using Express.js on cloud platforms.</li>
+        <li>Experience: 0-1 year</li>
+        <li>Remote</li>
+        <li>Skills: Strong proficiency in JavaScript and Node.js and Session and cookie handling</li>
+      </ul>
+      <form action="/apply-job" method="POST">
+        <input type="hidden" name="Title" value="Express.js Developer">
+        <input type="hidden" name="Description" value="We are hiring an Express.js Developer to develop and maintain backend services. The ideal candidate should have experience in building APIs, middleware integration, and deploying applications using Express.js on cloud platforms.">
+        <input type="hidden" name="Experience" value="1">
+        <input type="hidden" name="Type" value="Remote">
+        <input type="hidden" name="Skills" value="Strong proficiency in JavaScript and Node.js and Session and cookie handling">
+        <button type="submit" class="apply-btn">Apply</button>
+      </form>
+    </div>
+
+    <script>
+      const jobApplied= document.querySelectorAll('.apply-btn')
+      jobApplied.addEventListener("click",()=>{
+        jobApplied.innerText="Applied"
+        jobApplied.disabled= true
+      })
+    </script>
 </body>
-</html>
+</html> 
