@@ -107,7 +107,11 @@
 </head>
 <body>
 
-
+<% if (successMessage.length > 0) { %>
+  <div class="alert alert-success">
+    <%= successMessage[0] %>
+  </div>
+<% } %>
 
   <div class="container">
     <h1 class="title">Apply now</h1>
