@@ -36,15 +36,6 @@
   // FOR SENDING EMAIL TO CUSTOMERS
   const nodemailer = require('nodemailer');
 
-  require('dotenv').config()
-
-  app.use(session({
-    secret: 'your_secret_key',
-    resave: false,
-    saveUninitialized: true
-  }));
-
-  app.use(flash());
 
   // Route where user can see the account creation page
   app.get("/", (req, res) => {
@@ -553,7 +544,7 @@
   // APPLY FOR JOBS
 
   app.get('/jobs',verifyUser, (req,res)=>{
-    res.render('jobs', {successMessage: req.flash("success")})
+    res.render('jobs') 
   })
 
   const storage= multer.diskStorage({
@@ -579,6 +570,12 @@
     try{
       const{Title,Description, Experience, Skills, Type}= req.body
 
+      const appliedJob= await job.findOne({Email: req.user.email, Description})
+
+      if(appliedJob){
+        return res.send('You already applied for this job')
+      }
+
     const createdJob= await job.create({
       Email: req.user.email,
       Title,
@@ -597,9 +594,7 @@
     })
 
     console.log(createdJob)
-    // res.send(`Applied for ${createdJob.Title}`)
-    req.flash("Success", `Application submitted for ${Title}`)
-    res.redirect('/jobs')
+    res.send(`Applied for ${createdJob.Title}`)
     }catch(err){
       console.log(err)
       res.status(500).send("Error in applying")
