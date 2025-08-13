@@ -610,11 +610,23 @@
     res.render('yourAppliedJobs',{appliedJobs})
   })
 
+// JOIN CLASSES
+
+app.get('/class', verifyUser, async(req,res)=>{
+  const user= await userAcc.findOne({email: req.user.email})
+  res.render('class',{user})
+})
+
   // Logout
   app.get('/logout', (req, res) => {
     res.cookie("token", "")
     res.redirect('login') 
   })
+
+  app.post('/join-classes',(req,res)=>{
+    res.send("Registration successfull")
+  })
+
 
   app.listen(PORT, () => { 
     console.log(`Server running on port ${PORT}`);
