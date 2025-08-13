@@ -10,8 +10,6 @@
   app.use(cookie());
   const path = require('path');
   const multer= require('multer')
-  const session= require('express-session')
-  const flash= require('connect-flash')
   const PORT = process.env.PORT || 3000;
  
   // EMAIL COMNFIRMATION
