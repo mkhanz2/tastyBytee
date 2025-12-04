@@ -40,4 +40,4 @@ function emailConfirmation(userEmail, itemDetails) {
   });
 }
 
-module.exports = emailConfirmation;
+module.exports = emailConfirmation;     

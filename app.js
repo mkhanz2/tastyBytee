@@ -50,7 +50,7 @@
       if (findUser) {
         res.status(500).alert("User already registered")
       }
-
+        
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(password, salt, async (err, hash) => {
           const user = await userAcc.create({
@@ -139,7 +139,7 @@
   app.post('/edit', verifyUser, async (req, res) => {
     const { name, address, email, number, dob } = req.body;
 
-    try {
+    try { 
       // Build update object only with non-empty fields
       const updateFields = {};
       if (name) updateFields.name = name;
